@@ -1,0 +1,76 @@
+{% extends "homepage.html" %}
+
+{% block content %}
+
+	<!-- <h1>Business Analyst</h1> -->
+	<header  class="w3-container w3-red w3-center" style="padding:128px 16px">
+
+	<center>
+	 <h1 class="w3-margin w3-jumbo">  Be a Selective Job Seeker</h1>
+	  <p class="w3-xlarge">Data analytics project</p>
+	    <h2>{{job_to_ht}}</h2>
+	    <h2></h2>
+	    <br>
+
+	 </center>
+	</header>
+	<!-- <h1> Test</h1>	 -->
+	<div class="w3-row-padding w3-padding-64 w3-container">
+  	 <div class="w3-content">
+      <div ">
+        <h1>Exploration of job postings content</h1>
+
+        <p class="w3-text-grey">
+        The Wordcloud represents the overall view of job description and requirement of each job title in terms of bigram.
+         Our text corpora comes from recent nationwide job postings, and city with higher number of job postings contributes more to the text corpora. 
+		</p>
+      </div>
+
+      <div class="w3-third w3-center">
+        <img src="{{ url_for('static',filename=new_br_name) }}" style="width:600px;height:600px;"></i>
+      </div>
+  </div>
+</div>
+	<!-- <div class="image-container"> -->
+	<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  	 <div class="w3-content">
+      <div >
+        <h1>Hard skills you need</h1>
+        <p class="w3-text-grey">
+    	  This Wordcloud shows how frequent each programming skill is required by the job in the explicit job qualification.
+          We could see the importance of each programming skill and prepare correspondinglly to the job we are interested in.
+		</p>
+      </div>
+
+      <div class="w3-third w3-center">
+        <img src="{{ url_for('static',filename=new_wc_name) }}" style="width:600px;height:600px;"></i>
+      </div>
+  </div>
+
+
+<!--   <div class="actions">
+  	<a href="/">Back</a>
+    </div> -->
+    <div class="w3-row-padding w3-padding-64 w3-container">
+  	 <div class="w3-content">
+      <div >
+        <h1>Find similar jobs </h1>
+        <p class="w3-text-grey">
+         The Network plot shows the similarity between the our chosen job and all of other jobs by using specific similarity algorithm. 
+         The bold edge defines the job that is similar in terms of programming skills requirement with the center job. And the dashed edge defines the job that is not similar to the chosen one.
+		 The similarity score is shown on the graph.
+		</p>
+      </div>
+
+      <div class="w3-third w3-center">
+        <img src="{{ url_for('static',filename=new_nk_name) }}" style="width:600px;height:600px;"></i>
+      </div>
+  </div>
+</div>
+  </div>
+  <div class="w3-container w3-padding-64 w3-center w3-opacity">
+  	<a href="/">Back</a>
+  </div>
+
+{% endblock %}
+

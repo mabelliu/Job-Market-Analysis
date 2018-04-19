@@ -1,0 +1,82 @@
+{% extends "homepage.html" %}
+{% block content %}
+  {% if session.data_loaded %}
+
+<header  class="w3-container w3-red w3-center"  style="padding:128px 16px ">
+
+	<center>
+	 <h1 class="w3-margin w3-jumbo">  Be a Selective Job Seeker</h1>
+	  <p class="w3-xlarge">Data analytics project</p>
+	      <table >
+	   <!--  <form action="/Home" method='POST' name="text"> -->
+	    <!--Add Selection Box--> 
+	      <tbody>
+	      	<tr>
+		      	 <form action="/map" method='get' name="text">
+		   			 <input class="w3-button w3-black w3-padding-large w3-large w3-margin-top"  type="submit" name="submit" value='US H1B Map' style="height: 40px; width: 200px; border: 1px solid black">
+				</form>
+				<tr style="border-spacing: 10px;">
+				</tr>
+				<form action="/analytics" method='get' name="text">
+		   			 <input class="w3-button w3-black w3-padding-large w3-large w3-margin-top" type="submit" name="submit" value='H1B Data Analytics' style="height: 40px; width: 200px; border: 1px solid black">
+		   		</form>
+		   		<form action="/analytics1" method='get' name="text">
+		   			 <input class="w3-button w3-black w3-padding-large w3-large w3-margin-top" type="submit" name="submit" value='Job & skill Analytics' style="height: 40px; width: 200px; border: 1px solid black">
+		   		</form>
+	   		</tr>
+	<!--         <tr>
+	          <td class=attr> <h3><font color="white"> US H1B Map</font> </h3></td>
+	          <td class=attr><h3><font color="white"> H1B Data Analytics</font> </h3></td>
+	          <td class=attr><h3><font color="white">Job & skill Analytics </font> </h3></td>
+	        </tr> -->
+	 
+	      </tbody>
+	    </table>
+	    <h2></h2>
+	    <h2></h2>
+	    <br>
+
+	  </center>
+	 </header>
+
+	<div class="w3-row-padding w3-padding-64 w3-container">
+  	 <div class="w3-content">
+      <div class="w3-twothird">
+        <h1>H1B data</h1>
+        <h5 class="w3-padding-32">The H-1B is an employment-based, non-immigrant visa category for temporary foreign workers in the United States. For a foreign national to apply for H1-B visa, an US employer must offer a job and petition for H-1B visa with the US immigration department. This is the most common visa status applied for and held by international students once they complete college/ higher education (Masters, PhD) and work in a full-time position.
+        </h5>
+
+        <p class="w3-text-grey">
+        The Office of Foreign Labor Certification (OFLC) generates program data that is useful information about the immigration programs including the H1-B visa.</p>
+      </div>
+
+      <div class="w3-third w3-center">
+        <img src='/static/H1Bdata.png' style="width:600px;height:350px;"></i>
+      </div>
+  </div>
+</div>
+
+<!-- Second Grid -->
+<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+  <div class="w3-content">
+    <div class="w3-twothird">
+      <h1>Indeed data</h1>
+      <h5 class="w3-padding-32">Indeed.com is an American worldwide employment-related search engine for job listings.The site aggregates job listings from thousands of websites, including job boards, staffing firms, associations, and company career pages.
+      </h5>
+
+      <p class="w3-text-grey">
+      We scrapped job qualifications and requirements data for each job title with most recent job postings to conduct text analysis</p>
+    </div>
+ 
+
+    <div class="w3-third w3-center">
+
+      <img src="/static/indeeddata.png" style="width:600px;height:300px;"></i>
+    </div>
+  </div>
+</div>
+  {% else %}
+    <div class="app-error"> Oops! Data wasn't loaded properly</div>
+
+  {% endif %}
+{% endblock %}
